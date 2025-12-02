@@ -1,0 +1,191 @@
+
+
+<?php
+// /contact-submit (POST)
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') exit;
+
+$honeypot = $_POST['website'] ?? '';
+if ($honeypot !== '') { http_response_code(400); exit; } // likely bot
+
+$name = trim($_POST['name'] ?? '');
+$email = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
+
+$errors = [];
+if (!$name) $errors[] = 'name';
+if (!$email) $errors[] = 'email';
+if (strlen($message) < 10) $errors[] = 'message';
+
+if ($errors) {
+  http_response_code(422);
+  echo json_encode(['errors'=>$errors]);
+  exit;
+}
+
+// Use prepared statements / mail library to persist or send
+// Example: mail(...) or save to DB and queue notification
+// Rate-limit, CSRF token, and sanitize output when rendering back to users
+http_response_code(200);
+echo json_encode(['status'=>'ok']);
+
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Page Title</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">ACUEILL</a> |
+    <a href="apropos.html">APROPOS</a> |
+    <a href="services.html"></label>SERVICES</a> |
+    <a href="actualites.html">ACTUALITES</a>
+    <a href="programmes.html">PROGRAMMES</a>
+    <a href="galery.html">GALERY</a>
+    <a href="contacts.html">CONTACTS</a>
+    
+    <a href="opport.html"> OPPORTINUTES</a>
+    <a href="politique.html"> POLITIQUE</a>
+      
+    <!-- Add links to all 10 pages -->
+  </nav>
+
+<style>
+  .txt-intro{
+    padding: 10px;
+    background-color: beige;
+    color: black;
+    text-align: center;
+  }
+</style>
+<div class="txt-intro">
+  <h1 style="border: #0b5cff;">Nous restons à votre écoute !</h1>
+  <p>Pour toute question, suggestion ou partenariat, contactez-nous via le formulaire <br>ci-dessous ou par nos coordonnées directes.
+</p>
+
+</div>
+  <form id="contact" action="conn.php" method="POST" novalidate>
+  <label for="name">Nom Complet</label>
+  <input id="name" name="name" type="text" required maxlength="100" />
+
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required />
+
+  <label for="subject">Sujet</label>
+  <input id="subject" name="subject" type="text" required maxlength="150" />
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required minlength="10" maxlength="5000"></textarea>
+
+  <!-- Honeypot (hidden from users but bots may fill) -->
+  <label class="visually-hidden" for="website">Website</label>
+  <input id="website" name="website" type="text" class="visually-hidden" aria-hidden="true" tabindex="-1" />
+
+  <button type="submit">Envoyer message</button>
+</form>
+
+
+
+<!-- google map start -->
+<div class="contact-block">
+  <div class="contact-left">
+    <h2>Notre Addrsse</h2>
+    <p> <i> RD Congo, Nord-Kivu, Ville/Goma <br>Com.Karisimbi<br> Q.Ndosho Av. Muhabura<br></i><i style="color: red;">RCCM: CD/GOM/RCCM/21-A-00394</i> </p>
+
+    <ul class="contact-links">
+      <li><a href="tel:+15551234567" aria-label="Call us">📞 +243 97 74 22 116, +243808651580</a></li>
+      <li><a href="asmovc2014@gmail.com" aria-label="Email us">✉️ asmovc2014@gmail.com</a></li>
+      <li><a href="/contact" aria-label="Contact form">📝 Formulaire de contacts</a></li>
+    </ul>
+
+    <div class="social">
+      <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener" aria-label="Twitter">
+        <!-- simple accessible SVG icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.3-1 1.6-1.8-.7.4-1.5.7-2.3.9C18.6 4.9 17.5 4.4 16.3 4.4c-2 0-3.6 1.7-3.6 3.8 0 .3 0 .6.1.9C9.2 9 6.2 7.6 4.3 5.2c-.4.6-.6 1.4-.6 2.2 0 1.3.7 2.5 1.8 3.2-.6 0-1.1-.2-1.6-.5v.1c0 2.1 1.5 3.8 3.4 4.2-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.6 3.3-1.7 1.3-3.8 2-6 2-.4 0-.8 0-1.2-.1 2.1 1.3 4.5 2 7.1 2 8.5 0 13.2-7 13.2-13.1v-.6c.9-.7 1.6-1.5 2.1-2.4-.8.4-1.6.6-2.4.7z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6 1.11 6 0 4.88 0 3.5 0 2.12 1.11 1 2.49 1 3.86 1 4.98 2.12 4.98 3.5zM.5 8h3.99v13H.5zM8.5 8h3.83v1.8h.05c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.78 2.66 4.78 6.12V21H18.5v-6.2c0-1.48-.03-3.39-2.07-3.39-2.07 0-2.39 1.62-2.39 3.29V21H8.5z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <!-- Use the Google Maps "embed" iframe from Google Maps -> Share -> Embed map.
+         Replace src with your map's embed URL. Add loading="lazy" for performance. -->
+    <iframe
+      class="map-iframe"
+      src="https://www.google.com/maps/place/ASMOVC+RDC+COORDINATION/@-1.63894,29.1801962,17z/data=!3m1!4b1!4m6!3m5!1s0x19dd0952d0fb85e7:0xa36543f039180610!8m2!3d-1.63894!4d29.1801962!16s%2Fg%2F11r3f58bkk?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+      width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Office location on map" title="Office location on map"></iframe>
+  </div>
+</div>
+
+<style>
+.contact-block{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;padding:1.25rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+.contact-left h2{margin:.25rem 0 .5rem}
+.contact-links{list-style:none;padding:0;margin:0 0 1rem}
+.contact-links li{margin:.4rem 0}
+.contact-links a{color:#0b5cff;text-decoration:none}
+.contact-links a:hover{text-decoration:underline}
+.social{display:flex;gap:.5rem}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#f1f5ff;color:#0b5cff;border-radius:6px;text-decoration:none}
+.map-iframe{width:100%;height:100%;min-height:220px;border-radius:6px}
+@media (max-width:800px){.contact-block{grid-template-columns:1fr;}.contact-right{order:1}.contact-left{order:2}}
+@media (max-width:375px){.contact-block{grid-template-columns:1fr;}.contact-right{order:1}.contact-left{order:2}}
+</style>
+<!-- google map end -->
+
+
+ <!-- footer start -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.jpg" alt="Example Co. logo" width="120">
+      <p>Amani patrick build cap</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+       <a href="index.html"><i>ACUEILL</i></a></li> 
+    <a href="apropos.html"><i>APROPOS</i></a></li> 
+    <a href="services.html"><i>SERVICES</i></a></li> 
+     <a href="actualites.html"><i>ACTUALITES</i></a></li> 
+    <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
+    <a href="galery.html"><I>GALERY</I></a></li> 
+    <a href="contacts.html"><i>CONTACTS</i></a></li> 
+  <a href="opport.html"><i>  & OPPORTINUTES</i></a>
+    <a href="politique.html"> <i>POLITIQUE</i></a></li>
+    </nav>
+
+    <div class="footer-contact">
+      <address>
+        <strong> Le Client est roi.</strong><br>
+        RDC, NORD KIVU Goma<br>
+        <a href="mailto:hello@example.com">asmovcdrc@gmail.com</a>
+      </address>
+      <div class="footer-social" aria-hidden="false">
+        <a href="https://twitter.com/example" class="icon" aria-label="Twitter">🌐</a>
+        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub">📝</a>
+        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="Twitter">🌐</a>
+        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter">🌐</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>&copy; <span id="year"></span> Asmovc RDC. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<!-- footer end -->
+
+
+   
+</body>
+</html>

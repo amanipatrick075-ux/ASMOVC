@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Page Title</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">ACUEILL</a> |
+    <a href="apropos.html">APROPOS</a> |
+    <a href="services.html"loo[]"></label>SERVICES</a> |
+    <a href="actualites.html">ACTUALITES</a>
+    <a href="programmes.html">PROGRAMMES</a>
+    <a href="galery.html">GALERY</a>
+    <a href="contacts.html">CONTACTS</a>
+  
+    <a href="opport.html">OPPORTUNITES</a>
+    <a href="politique.html"> POLITIQUE</a>
+    <!-- Add links to all 10 pages -->
+  </nav>
+<div class="txt-intro">
+  <h1>Restez informés de nos dernières activités, programmes et événements.</h1>
+  <p>Dans cette rubrique, vous trouverez des articles, communiqués, témoignages et publications mettant en avant les actions concrètes de l’ASMOVC RDC sur le terrain.</p>
+
+</div>
+
+  <section class="news-section">
+  <h2>Annonce officielle</h2>
+
+  <form id="newsForm" class="news-form">
+    <input type="text" id="newsTitle" placeholder="Titre" required />
+    <input type="date" id="newsDate" />
+    <textarea id="newsSummary" placeholder="Synthese" required></textarea>
+    <button type="submit">Publier l'Annonce</button>
+  </form>
+
+  <div id="newsList" class="news-list">
+    <!-- Example static item -->
+    <article class="news-item">
+      <header>
+        <h3 class="news-title">Site Publie</h3>
+        <time class="news-date" datetime="2025-10-24">Oct 24, 2025</time>
+      </header>
+      <p class="news-summary">Nous avons publies l'annonce d'aujourdhui avec  X, Y and Z.</p>
+      <a class="news-readmore" href="/news/site-launched">ASMOVC Annonce</a>
+    </article>
+  </div>
+</section>
+<!-- CSS (NEWS START) -->
+<style>
+  .news-section { max-width: 720px; margin: 1.5rem auto; padding: 0 1rem; font-family: system-ui, Arial; }
+  .news-form { display: grid; gap: .5rem; margin-bottom: 1rem; }
+  .news-form input, .news-form textarea { padding: .4rem; border: 1px solid #ccc; border-radius: 4px; }
+  .news-list { display: grid; gap: 1rem; }
+  .news-item { border: 1px solid #e0e0e0; padding: .8rem; border-radius: 6px; background: #fff; }
+  .news-item header { display:flex; justify-content:space-between; align-items:center; gap:.5rem; }
+  .news-title { margin: 0; font-size: 1.05rem; }
+  .news-date { font-size: .85rem; color: #666; }
+  .news-summary { margin:.5rem 0; color:#333; }
+  .news-readmore { color:#0066cc; text-decoration:none; font-weight:500; }
+</style>
+<!-- CSS (NEWS END) -->
+
+ <!-- footer start -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.jpg" alt="Example Co. logo" width="120">
+      <p>Amani patrick build cap</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+       <a href="index.html"><i>ACUEILL</i></a></li> 
+    <a href="apropos.html"><i>APROPOS</i></a></li> 
+    <a href="services.html"><i>SERVICES</i></a></li> 
+     <a href="actualites.html"><i>ACTUALITES</i></a></li> 
+    <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
+    <a href="galery.html"><I>GALERY</I></a></li> 
+    <a href="contacts.html"><i>CONTACTS</i></a></li> 
+  <a href="opport.html"><i> PARTENARIATS & OPPORTINUTES</i></a>
+    <a href="politique.html"> <i>POLITIQUE</i></a></li>
+    </nav>
+
+    <div class="footer-contact">
+      <address>
+        <strong>Client est roi.</strong><br>
+        RDC, NORD KIVU Goma<br>
+        <a href="mailto:hello@example.com">asmovcdrc@gmail.com</a>
+      </address>
+      <div class="footer-social" aria-hidden="false">
+        <a href="https://twitter.com/example" class="icon" aria-label="Twitter">🌐</a>
+        <a href="https://github.com/example" class="icon" aria-label="GitHub">📝</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>&copy; <span id="year"></span> Asmovc RDC. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<!-- footer end -->
+
+    
+</body>
+
+
+
+</html>
