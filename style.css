@@ -32,7 +32,13 @@ nav a:hover {
 h1 {
   /* color: #d42d2d; */
   text-align: center;
-  margin-top: 30px;
+}
+h1.main-header {
+  margin: 0 auto 15px;
+  width: 90%;
+  box-shadow: 2px 2px 2.5px;
+  padding: 20px;
+  border-radius: 0.8rem;
 }
 
 p {
@@ -68,6 +74,10 @@ background-color: aquamarine;
   display: block;
   object-fit: cover;
   border-radius: 6px;
+}
+/* removed content */
+.removed {
+  display: none;
 }
 
 /* Keyframes: translate whole track left */
@@ -113,9 +123,6 @@ background-color: aquamarine;
 @media (prefers-reduced-motion: reduce) {
   .bg-img { animation: none; }
 }
-
-
-
 /* photo et text moving de service */
 .card {
   position: relative;
@@ -447,6 +454,9 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+nav:active {
+  display: flex;
 }
 nav a {
   display: block;
