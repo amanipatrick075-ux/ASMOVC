@@ -7,6 +7,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+nav a{
+  box-shadow: 2px 2px 4px;
+  border-radius: 0.5rem;
+  padding: 5px;
+}
 @media only screen and (max-width: 1440px){
   
 
@@ -15,11 +21,16 @@ nav {
   padding: 10px;
   text-align: center;
 }
+.miv{
+  text-align: center;
+}
 
 nav a {
   color: greenyellow;
   margin: 0 15px;
   text-decoration:  none;
+  border: #0f1720;
+  border-radius: 14px;
 }
 
 nav a:hover {
@@ -564,6 +575,7 @@ summary {
   padding: 5px;
 }
 } 
+/* SMARTPHONE END */
 
 
 

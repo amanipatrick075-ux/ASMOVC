@@ -1,8 +1,8 @@
-const nav = document.getElementById ('nav');
-const menu = document.querySelector('.ri-menu-fill').addEventListener('click', () => {
-    nav.style.display = 'flex'
+
+document.addEventListener('DOMContentLoaded', ()=> {
+   const nav = document.getElementById ('nav');
+   const menu = document.getElementById('menu');
+
+menu && menu.addEventListener('click', () => nav.classList.toggle('active'));
+
 });
-// menu.addEventListener('click', ()=>{
-//     nav.style.display = 'flex'
-// })
-console.log('hello world')
