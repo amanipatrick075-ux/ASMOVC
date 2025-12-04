@@ -20,6 +20,18 @@ nav a{
   border-radius: 0.5rem;
   padding: 5px;
 }
+.service-a{
+  background-color: grey;
+}
+.service-b{
+  background-color: wheat;
+}
+.service-c{
+  background-color: cadetblue;
+}
+.service-d{
+  background-color: var(--card-border);
+}
  
  
  
@@ -588,6 +600,8 @@ summary {
   border-radius: 0.5rem;
   padding: 5px;
 }
+
+/* services page */
 .men {
   display: flex;
   flex-direction: column;
@@ -597,6 +611,18 @@ summary {
   box-shadow: 2px 2px 4px;
   border-radius: 0.5rem;
   padding: 5px;
+}
+.service-a{
+  background-color: grey;
+}
+.service-b{
+  background-color: wheat;
+}
+.service-c{
+  background-color: cadetblue;
+}
+.service-d{
+  background-color: var(--card-border);
 }
 } 
 /* SMARTPHONE END */
