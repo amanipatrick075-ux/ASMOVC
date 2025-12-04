@@ -767,7 +767,7 @@ summary {
 
   body{
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: linear-gradient(180deg,var(--bg),#ffffff 60%);
+    /* background: linear-gradient(180deg,var(--bg),#ffffff 60%); */
     margin: 2rem;
     color:#0f172a;
   }
@@ -776,12 +776,13 @@ summary {
     background: var(--card);
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(15,23,42,0.06);
-    overflow: hidden;
+    overflow: scroll;
     border: 1px solid var(--border);
+    width: 100%;
   }
 
   table{
-    width:100%;
+    /* width:100%; */
     border-collapse: collapse;
     min-width: 420px;
   }
@@ -804,6 +805,10 @@ summary {
     top:0;
     z-index:2;
     border-bottom: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    overflow-x: scroll;
   }
 
   tbody td{
@@ -834,7 +839,7 @@ summary {
   }
 
   /* Responsive card layout for small screens */
-  @media (max-width:640px){
+  /* @media (max-width:640px){ */
     table, thead, tbody, th, td, tr { display:block; }
     thead { display:none; }
     tr { margin: 0.6rem; background:transparent; border-radius:10px; box-shadow: none; }
@@ -860,9 +865,7 @@ summary {
     text-align: center;
   }
   }
-  
 
-} 
 
 /* SMARTPHONE END */
 
