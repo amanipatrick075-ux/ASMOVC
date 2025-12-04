@@ -1,135 +1,35 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>JavaScript Demo</title>
   <link rel="stylesheet" href="style.css">
-  <title>Page Title</title>
+  <title>Programme et Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="mainscript.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">ACUEILL</a> 
-    <a href="apropos.html">APROPOS</a> 
-    <a href="services.html">SERVICES</a> 
-    <a href="actualites.html">ACTUALITES</a>
-    <a href="programmes.html">PROGRAMMES</a>
-    <a href="galery.html">GALERY</a>
-    <a href="contacts.html">CONTACTS</a>
+  <header>
+  <h1 class="main-header" id="
+  main-header">ASMOVC official</h1>
+  <i id="menu" class="ri-menu-fill"></i>
+  <nav id="nav">
+   <a href="index.html">ACUEILL</a></li> 
+    <a href="apropos.html">APROPOS</a></li> 
+    <a href="services.html">SERVICES</a></li> 
+     <a href="actualites.html">ACTUALITES</a></li> 
+    <a href="programmes.html">PROGRAMMES</a></li> 
+    <a href="galery.html">GALERY</a></li> 
+    <a href="contacts.html">CONTACTS</a></li> 
+  <a href="opport.html">   OPPORTINUTES</a>
+    <a href="politique.html"> POLITIQUE</a></li>
     
-    <a href="opport.html"> OPPORTUNITES</a>
-    <a href="politique.html"> POLITIQUE</a>
     <!-- Add links to all 10 pages -->
   </nav>
-  <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Programme et Projects</title>
-<style>
-  :root{
-    --bg:#f6f7fb;
-    --card:#ffffff;
-    --muted:#6b7280;
-    --accent:#2563eb;
-    --accent-2:#60a5fa;
-    --border: rgba(15, 23, 42, 0.06);
-  }
+  </header>
 
-  body{
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: linear-gradient(180deg,var(--bg),#ffffff 60%);
-    margin: 2rem;
-    color:#0f172a;
-  }
-
-  .table-card{
-    background: var(--card);
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-
-  table{
-    width:100%;
-    border-collapse: collapse;
-    min-width: 420px;
-  }
-
-  caption{
-    text-align:left;
-    padding: 1rem 1.25rem 0.25rem;
-    font-weight:600;
-    color:var(--accent);
-    font-size:1rem;
-  }
-
-  thead th{
-    background: linear-gradient(180deg,#fff,#fbfdff);
-    font-weight:600;
-    padding: 0.9rem 1.25rem;
-    text-align: left;
-    font-size: 0.95rem;
-    position: sticky;
-    top:0;
-    z-index:2;
-    border-bottom: 1px solid var(--border);
-  }
-
-  tbody td{
-    padding: 0.95rem 1.25rem;
-    border-bottom: 1px solid rgba(15,23,42,0.04);
-    vertical-align: middle;
-    font-size: 0.95rem;
-  }
-
-  tbody tr:hover{
-  background: linear-gradient(90deg, rgba(96,165,250,0.04), rgba(96,165,250,0.02));
-  }
-
-  .muted{
-    color:var(--muted);
-    font-size:0.9rem;
-  }
-
-  .badge{
-    display:inline-block;
-    padding:0.25rem 0.5rem;
-    border-radius:999px;
-    font-size:0.8rem;
-    background:linear-gradient(90deg,var(--accent-2),var(--accent));
-    color:#fff;
-    box-shadow: 0 2px 6px rgba(37,99,235,0.12);
-    font-weight:600;
-  }
-
-  /* Responsive card layout for small screens */
-  @media (max-width:640px){
-    table, thead, tbody, th, td, tr { display:block; }
-    thead { display:none; }
-    tr { margin: 0.6rem; background:transparent; border-radius:10px; box-shadow: none; }
-    .table-card { padding: 0.6rem; }
-    td{
-      padding: 0.6rem;
-      border: none;
-      background: var(--card);
-      display:flex;
-      justify-content:space-between;
-      gap:1rem;
-      border-radius:8px;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.03);
-    }
-    td + td { margin-top: 0.45rem; }
-    td::before{
-      content: attr(data-label);
-      font-weight:600;
-      color:var(--muted);
-      margin-right:0.5rem;
-    }
-  }
-</style>
-</head>
 <body>
   <div class="txt-intro">
     <h1>L’ASMOVC RDC mène plusieurs programmes et projets visant à renforcer le développement communautaire et économique dans différentes régions du pays.</h1>
@@ -171,12 +71,19 @@
   </table>
 </div>
 
- <!-- footer start -->
-<footer class="site-footer" role="contentinfo">
+ <!-- footer start --><footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="img/logo.jpg" alt="Example Co. logo" width="120">
-      <p>Amani patrick build cap</p>
+      <div class="silv-details">
+      <details>
+        <summary><span>Amani patrick</span> build cap.</summary>
+        <div class="contributors">
+          <h3>Thanks to :</h3>
+          <ul><li>Silva-Charles <span>Dev.</span></li></ul>
+        </div>
+      </details>
+      </div>
     </div>
 
     <nav class="footer-nav" aria-label="Footer">
@@ -187,7 +94,7 @@
     <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
     <a href="galery.html"><I>GALERY</I></a></li> 
     <a href="contacts.html"><i>CONTACTS</i></a></li> 
-  <a href="opport.html"><i>  & OPPORTINUTES</i></a>
+    <a href="opport.html"><i>  & OPPORTINUTES</i></a>
     <a href="politique.html"> <i>POLITIQUE</i></a></li>
     </nav>
 
@@ -198,10 +105,10 @@
         <a href="mailto:hello@example.com">asmovcdrc@gmail.com</a>
       </address>
       <div class="footer-social" aria-hidden="false">
-        <a href="https://twitter.com/example" class="icon" aria-label="Twitter">🌐</a>
-        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub">📝</a>
-        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="Twitter">🌐</a>
-        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter">🌐</a>
+        <a href="https://twitter.com/example" class="icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub"> <i class="ri-facebook-box-line"></i></a>
+        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="tiktok"> <i class="ri-tiktok-line"></i></a>
+        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter"><i class="ri-youtube-line"></i></a>
       </div>
     </div>
   </div>
@@ -216,6 +123,9 @@
 </script>
 <!-- footer end -->
 
+    
 </body>
+
+
 
 </html>
