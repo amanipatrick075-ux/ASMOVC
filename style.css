@@ -14,6 +14,30 @@ nav a{
   padding: 5px;
 }
 @media only screen and (max-width: 1440px){
+
+/* management team */
+  .management{
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  figure{
+    background-color: gray;
+    box-shadow: 0 4px 4px 0;
+
+  }
+  figure img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+  }
+  .valeurs li{
+    text-align: center;
+  }
+  .hero2 img{
+    height: auto;
+    width: 100%;
+  }
 /* programe */
 
   :root{
@@ -484,7 +508,9 @@ button { background:#0366d6; color:#fff; padding:0.6rem 1rem; border:none; borde
   width:36px;height:36px;border-radius:6px;background:rgba(255,255,255,0.03);color:var(--muted);text-decoration:none;
 }
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.03);padding:0.75rem var(--pad);text-align:center;}
-
+.footer-brand img{
+  border-radius: 50%;
+}
 
 /* footer end */
 
@@ -684,6 +710,8 @@ nav:hover a{
 .footer-brand img {
   width: 30%;
   height: auto;
+  border-radius: 50%;
+
 }
 .silv-details {
   width: 100%;
@@ -754,6 +782,25 @@ summary {
   .news-summary { margin:.5rem 0; color:#333; }
   .news-readmore { color:#0066cc; text-decoration:none; font-weight:500; }
 /* actualites end */
+
+/* management team  in aprpos*/
+  .management{
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  figure{
+    background-color: gray;
+    box-shadow: 0 4px 4px 0;
+
+  }
+  figure img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+  }
+  
 
 /* progamme */
 
