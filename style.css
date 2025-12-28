@@ -6,6 +6,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 nav a{
@@ -15,7 +16,7 @@ nav a{
 }
 @media only screen and (max-width: 1440px){
 
-/* management team */
+/* management team apropos */
   .management{
     background-color: none;
     display: flex;
@@ -474,7 +475,7 @@ button { background:#0366d6; color:#fff; padding:0.6rem 1rem; border:none; borde
 /* contact end */
 
 /* footer start */
-:root{
+/* :root{
   --bg:#0f1720;
   --muted:#9aa4b2;
   --accent:#06b6d4;
@@ -510,7 +511,7 @@ button { background:#0366d6; color:#fff; padding:0.6rem 1rem; border:none; borde
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.03);padding:0.75rem var(--pad);text-align:center;}
 .footer-brand img{
   border-radius: 50%;
-}
+} */
 
 /* footer end */
 
