@@ -1,45 +1,96 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JavaScript Demo</title>
-  <link rel="stylesheet" href="apropos.css">
-  <link rel="stylesheet" href="footer.css">
-  <title>ASMOVC DRC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="mainscript.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+<title>SMOVC RDC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="imported.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="ai.css">
+<link rel="stylesheet" href="apropos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 </head>
 <body>
-  <header id="header-one">
-  <h1 class="main-header" id="TG
-  main-header">ASMOVC official</h1>
-  <i id="menu" class="ri-menu-fill"></i>
-  <nav id="nav">
-   <a href="index.html">ACUEILL</a></li> 
-    <a href="apropos.html">APROPOS</a></li> 
-    <a href="services.html">SERVICES</a></li> 
-     <a href="actualites.html">ACTUALITES</a></li> 
-    <a href="programmes.html">PROGRAMMES</a></li> 
-    <a href="galery.html">GALERY</a></li> 
-    <a href="contacts.html">CONTACTS</a></li> 
-  <a href="opport.html">   OPPORTINUTES</a>
-    <a href="politique.html"> POLITIQUE</a></li>
-    
-    <!-- Add links to all 10 pages -->
-  </nav>
-  </header>
 
-<main>
-  
-  <div class="txt-intro">
-    <h1 style="color: blue;">Qui sommes-nous ?</h1>
-    <p>L’ASMOVC RDC est née de la volonté de promouvoir les valeurs locales et de renforcer l’entrepreneuriat communautaire.
-<br>Notre organisation s’appuie sur la collaboration, la formation et la mise en valeur des produits et savoir-faire congolais.
-</p>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">ACUEILL</a>
+    <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APROPOS</a>
+    <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="opport.html" class="w3-bar-item w3-button">Opportinutes</a>
+        <a href="galery.html" class="w3-bar-item w3-button">Galery</a>
+        <a href="actualites.html" class="w3-bar-item w3-button">Actualites</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="opport.html" class="w3-bar-item w3-button">Opportinutes</a>
+        <a href="galery.html" class="w3-bar-item w3-button">Galery</a>
+        <a href="actualites.html" class="w3-bar-item w3-button">Actualites</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
 
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROGRAMMES</a>
+  <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APROPOS</a>
+  <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
+  <a href="galery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GALERY</a>
+  <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+</div>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/14.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>GAHINGA</h3>
+      <p><b>Le meilleur pomme de terre du monde!</b></p>   
+    </div>
+  </div>
+   <div class="mySlides w3-display-container w3-center">
+    <img src="img/12.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>LIVRAISON</h3>
+      <p><b>Acheter et nous te livrerons a ta residence!</b></p>   
+    </div>
   </div>
 
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/5.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>MATHER'O</h3>
+      <p><b>Qui sommes-nous.</b></p>    
+    </div>
+  </div> <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">« Bienvenue sur le site officiel de l'etablissement ASMOVC RDC »</h2>
+    <p class="w3-opacity"><i>Nous sommes une etablisment qui ouvre la RDC</i></p>
+    <pclass="w3-justify">L’ASMOVC RDC est née de la volonté de promouvoir les valeurs locales et de renforcer l’entrepreneuriat communautaire.
+<br>Notre organisation s’appuie sur la collaboration, la formation et la mise en valeur des produits et savoir-faire congolais.</p> 
+</pclass>
+</div>
+
+<!-- vision -->
   <div class="miv">
     <div  class="vision">
       <h1>Notre Vision</h1>
@@ -62,14 +113,7 @@
 
   </div>
 
-<div class="hero2">
-  <img class="bg-img" src="img/14.jpg" alt="" aria-hidden="true">
-  <div class="content">
-    <h1 style="color: blueviolet;">Notre pomme de terre de masisi</h1>
-    <p style="color: green;">Mange avec nous et vivez l'ambiance.</p>
-  </div>
-</div>
-<h2 style="text-align: center;">Equipe manageriale</h2>
+  <h2 style="text-align: center;">Equipe manageriale</h2>
 <div class="management">
   <figure>
     <img src="img/14.jpg" alt=""   id="cool">
@@ -110,11 +154,11 @@
 
 </main>
 
- <!-- footer start -->
+<!-- footer start -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="img/logo.jpg" alt="Example Co. logo" width="120" >
+      <img src="img/logo.jpg" alt="Example Co. logo" width="120">
       <div class="silv-details">
       <details>
         <summary><span>Amani patrick</span> build cap.</summary>
@@ -142,7 +186,7 @@
       <address>
         <strong> Le Client est roi.</strong><br>
         RDC, NORD KIVU Goma<br>
-        <a href="mailto:hello@example.com">asmovc2014@gmail.com</a>
+        <a href="mailto:hello@example.com"> asmovc2014@gmail.com</a>
       </address>
       <div class="footer-social" aria-hidden="false">
         <a href="https://twitter.com/example" class="icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
@@ -162,6 +206,41 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <!-- footer end -->
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

@@ -1,216 +1,94 @@
-html {font-size: 10px;}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+:root{
+  --gap: 1rem;
+  --card-pad: clamp(0.5rem, 1.2vw, 1rem);
+  --avatar-min: 80px;
+  --avatar-mid: 140px;
+  --avatar-max: 250px;
+  --max-width: 1200px;
+}
+
+/* base reset */
+*{box-sizing: border-box;}
+body{
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-@media only screen and (max-width: 1440px){
-
-header{
-    /* position: fixed;
-    z-index: 100;
-    background-color: grey */
-    
-    
-}
-main{
-    
-    position: relative;
-    scroll-padding-top: 60px;
-}
-
-    /* h1 */
-h1.main-header {
-  margin: 0 auto 15px;
-  width: 90%;
-  box-shadow: 2px 2px 2.5px;
-  padding: 20px;
-  border-radius: 0.8rem;
-}
-h1 {
-  /* color: #d42d2d; */
-  text-align: center;
-}
-.ri-menu-fill {
-    display: none;
-}
-  /* NAVIGATION */
-nav a {
-  color: whitesmoke;
-  margin: 0 16px;
-  text-decoration:  none;
-  border: #0f1720;
-  background-color: #0f1720;
-  box-shadow: 2px 2px 9px;
-  border-radius: 0.5rem;
-  padding: 16px;
-  margin-top: 2px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* txt intro */
-.txt-intro{
-      background-color: rgb(234, 224, 224) ;
-      color: #111;
-      padding: 5px;
-      
-    }
-    .miv {
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-    }
-
-    .miv .Mission{
-        background-color: #0366d6;
-        box-shadow: 0 8PX 4PX 0;
-        border-radius: 0PX 8PX 5PX 00PX;
-        width: 160px;
-    }
-/*  hero2*/
-
-
-.hero2{
-  position: relative;
-  overflow: hidden;
-  color: white;
-  height: 60vh;
-}
-
-
-/* background image fills and sits behind text */
-.bg-img{
-  position: absolute;
-  inset: 0;                    /* top:0; right:0; bottom:0; left:0 */
-  width: 150%;                 /* larger than container to allow movement */
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  transform: translateX(0);
-  will-change: transform;
-  pointer-events: none;
-}
-
-/* content sits above image */
-.content{ position: relative; z-index: 1; padding: 2rem; }
-
-/* animate with transform for smooth GPU rendering */
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-25%); }
-  100% { transform: translateX(0); }
-}
-.bg-img {
-  animation: slide 20s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg-img { animation: none; }
-}
-/* management team apropos */
-  .management{
-    background-color: none;
-    display: flex;
-    justify-content: space-between;
-  }
-  figure{
-    background-color: gray;
-    box-shadow: 0 4px 4px 0;
-
-  }
-  figure img{
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-  }
-
-}
-
-/* SMART PHONES */
-@media screen and (max-width: 375px){
- * {
-    box-sizing: border-box;
-  } 
-  .header-one{
-    display: flex;
-    flex-direction: column;
-   background-color: green;
-  }
-  
-.nav .li .a{
-    color: #0366d6;
-}
-  body {
-    width: 100vw;
-    height: 100vh;
-    font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
-  }
-  .ri-menu-fill {
-    display: block;
-  }
-  ul {
-    list-style: none;
-  }
-  li, summary span {
-    display: block;
-    color: #0366d6;
-  }
-  summary {
-    list-style-type: none;
-  }
-  h1 {
-    font-size: 30px;
-  }
-  h1.main-header {
-    color: rgb(37, 31, 31);
-    box-shadow: 0 5px 8px 0;
-    border-radius: 5px;
-    width: 100%;
-    padding: 1rem 0;
-    margin-bottom: 10px;
-    font-size: 30px;
-  }
-  .main-header::after {
-    content: '..';
-  }
-
-  /* NAVIGATION */
-  
-nav {
-  border-radius: 0.6rem;
-  margin-bottom: 0.5rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:#f7f8fb;
+  color:#111;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+/* main container */
+.management{
   width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr; /* stacked by default (small phones) */
+  align-items: start;
 }
-nav:active {
+
+/* card */
+figure{
+  background: #e6e6e6;
+  padding: var(--card-pad);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  margin: 0;
   display: flex;
-}
-nav a {
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-}
-nav:hover a{
-  color: #0366d6;
-  background-color: white;
-}
-.miv {
-    display: flex;
-    flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
+/* avatar */
+figure img{
+  border-radius: 50%;
+  width: clamp(var(--avatar-min), 18vw, var(--avatar-max));
+  height: clamp(var(--avatar-min), 18vw, var(--avatar-max));
+  object-fit: cover;
+  flex: 0 0 auto;
+}
 
+/* values list */
+.valeurs{ list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.valeurs li{ text-align: center; }
 
+/* hero image */
+.hero2 img{ width: 100%; height: auto; display:block; border-radius:8px; }
 
+/* Large phones: keep single column but increase spacing */
+@media (min-width: 360px) and (max-width: 599px){
+  :root{ --gap: 1.05rem; }
+  figure{ padding: calc(var(--card-pad) + 0.2rem); }
+}
 
+/* Tablets: two columns */
+@media (min-width: 600px) and (max-width: 899px){
+  .management{
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--gap) * 1.05);
+  }
+  figure{ flex-direction: column; align-items: center; text-align: center; }
+  figure img{ width: var(--avatar-mid); height: var(--avatar-mid); }
+}
 
+/* Laptops: three columns (or 2 + wide hero) */
+@media (min-width: 900px) and (max-width: 1199px){
+  .management{
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--gap) * 1.1);
+  }
+  figure{ align-items: flex-start; flex-direction: row; }
+  figure img{ width: 150px; height: 150px; }
+}
 
+/* Desktops / large screens: 4-column layout or wide grid */
+@media (min-width: 1200px){
+  .management{
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--gap) * 1.2);
+  }
+  figure img{ width: var(--avatar-max); height: var(--avatar-max); }
+  
 }
