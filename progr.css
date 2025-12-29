@@ -1,0 +1,104 @@
+
+
+/* Card wrapper */
+.table-card{
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  padding: var(--pad);
+}
+
+/* Table base (mobile-first) */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 320px; /* allow horizontal scroll on tiny screens */
+  font-size: 0.95rem;
+}
+caption{
+  text-align: left;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+thead th{
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+}
+tbody td{
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(15,23,42,0.04);
+  vertical-align: middle;
+}
+
+/* Utility classes used in rows/cards */
+.muted{ color: var(--muted); font-size: 0.9rem; }
+.badge{
+  display:inline-block;
+  padding:0.25rem 0.5rem;
+  border-radius:999px;
+  font-size:0.8rem;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  color:#fff;
+  box-shadow:0 2px 6px rgba(37,99,235,0.12);
+  font-weight:600;
+}
+
+/* Optional avatar cell/card styling */
+figure{
+  background: transparent;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+figure img{
+  border-radius: 50%;
+  width: clamp(var(--avatar-min), 16vw, var(--avatar-max));
+  height: clamp(var(--avatar-min), 16vw, var(--avatar-max));
+  object-fit: cover;
+}
+
+/* Breakpoints */
+/* Small phones (<= 359px) — compact spacing */
+@media (max-width: 359px){
+  .table-card{ padding: clamp(0.4rem, 2vw, 0.6rem); }
+  thead th, tbody td{ padding: 0.45rem 0.5rem; font-size: 0.9rem; }
+}
+
+/* Large phones (360px — 599px) */
+@media (min-width: 360px) and (max-width: 599px){
+  .table-card{ padding: clamp(0.5rem, 2.2vw, 0.8rem); }
+  thead th, tbody td{ padding: 0.55rem 0.75rem; }
+}
+
+/* Tablets (600px — 899px) — allow two-column card layouts */
+@media (min-width: 600px) and (max-width: 899px){
+  .table-card{ padding: var(--pad); }
+  table{ min-width: 540px; }
+  figure img{ width: var(--avatar-mid); height: var(--avatar-mid); }
+}
+
+/* Laptops (900px — 1439px) */
+@media (min-width: 900px) and (max-width: 1439px){
+  .table-card{ padding: calc(var(--pad) * 1.1); }
+  table{ min-width: 780px; }
+  thead th, tbody td{ padding: 0.8rem 1rem; }
+}
+
+/* Laptop / Desktop large (>= 1440px) */
+@media (min-width: 1440px){
+  .table-card{ padding: calc(var(--pad) * 1.25); }
+  table{ min-width: 1024px; font-size: 1rem; }
+  figure img{ width: var(--avatar-max); height: var(--avatar-max); }
+}

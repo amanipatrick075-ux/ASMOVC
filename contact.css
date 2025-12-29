@@ -1,0 +1,157 @@
+:root{
+  --max-width: 620px;
+  --pad: clamp(0.5rem, 1.6vw, 1rem);
+  --font-base: clamp(14px, 1.6vw, 16px);
+}
+
+html{ font-size: var(--font-base); box-sizing: border-box; }
+*,*::before,*::after{ box-sizing: inherit; }
+
+form{
+  width: min(92%, var(--max-width));      /* fluid width up to a max */
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(0.5rem, 1.2vw, 0.75rem);
+  padding: var(--pad);
+}
+
+label{ font-weight: 600; font-size: clamp(0.95rem, 1.2vw, 1rem); }
+input,textarea{
+  padding: clamp(0.5rem, 1.2vw, 0.75rem);
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button{
+  background: #0366d6;
+  color: #fff;
+  padding: clamp(0.5rem, 1.2vw, 0.75rem) clamp(0.75rem, 1.6vw, 1rem);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Breakpoints */
+/* Large phone */
+@media (min-width:360px) and (max-width:599px){
+  form{ gap: 0.9rem; }
+}
+
+/* Tablet */
+@media (min-width:600px) and (max-width:899px){
+  form{ width: min(88%, 720px); grid-auto-flow: row; gap: 1rem; }
+}
+
+/* Laptop (incl. 1440) */
+@media (min-width:900px) and (max-width:1439px){
+  form{ width: min(70%, 9700px); gap: 1.1rem; }
+}
+
+/* Desktop / large screens */
+@media (min-width:1440px){
+  form{ width: min(70%, 1100px); gap: 1.25rem; }
+}
+
+/* Utility */
+.visually-hidden { position:absolute !important; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+
+
+
+/* Container - mobile first */
+.contact-block{
+  width: min(96%, var(--max-width));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr; /* stacked on small screens */
+  gap: var(--gap);
+  align-items: start;
+  padding: var(--pad);
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Elements */
+.contact-left h2{ margin: .25rem 0 .5rem; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+.contact-links{ list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.4rem; }
+.contact-links li{ margin: 0; font-size: clamp(0.9rem, 1.6vw, 1rem); }
+.contact-links a{ color: var(--accent); text-decoration: none; }
+.contact-links a:hover{ text-decoration: underline; }
+
+.social{ display: flex; gap: clamp(0.4rem, 1.4vw, 0.6rem); }
+.social a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--social-size);
+  height: var(--social-size);
+  background: #f1f5ff;
+  color: var(--accent);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+}
+
+/* Map */
+.map-iframe{
+  width: 100%;
+  height: 100%;
+  min-height: var(--map-min-height);
+  border-radius: 6px;
+  border: 0;
+  display: block;
+}
+
+/* Small phones (<=359px) — compact */
+@media (max-width: 359px){
+  :root{ --gap: 0.5rem; --pad: 0.5rem; }
+  .contact-left h2{ font-size: 1rem; }
+  .social a{ width: 36px; height: 36px; font-size: 0.95rem; }
+}
+
+/* Large phones (360px - 599px) */
+@media (min-width: 360px) and (max-width: 599px){
+  :root{ --gap: 0.75rem; --pad: 0.75rem; }
+  .contact-block{ grid-template-columns: 1fr; }
+}
+
+/* Tablets (600px - 899px) — two columns */
+@media (min-width: 600px) and (max-width: 899px){
+  .contact-block{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .contact-left{ padding-right: 0.5rem; }
+}
+
+/* Laptops (900px - 1199px) — wider two-column ratio */
+@media (min-width: 900px) and (max-width: 1199px){
+  .contact-block{
+    grid-template-columns: 1.2fr 1fr; /* larger left column */
+    gap: calc(var(--gap) * 1.05);
+  }
+  .social a{ width: 40px; height: 40px; }
+  .map-iframe{ min-height: 260px; }
+}
+
+/* Laptop large / Desktop (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px){
+  .contact-block{ grid-template-columns: 1.3fr 1fr; gap: calc(var(--gap) * 1.1); }
+  .social a{ width: 44px; height: 44px; }
+  .map-iframe{ min-height: 300px; }
+}
+
+/* Desktop wide (>=1440px) */
+@media (min-width: 1440px){
+  .contact-block{
+    grid-template-columns: 1.5fr 1fr;
+    gap: calc(var(--gap) * 1.2);
+    padding: calc(var(--pad) * 1.1);
+  }
+  .social a{ width: 48px; height: 48px; }
+  .map-iframe{ min-height: 340px; }
+}

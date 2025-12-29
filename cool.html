@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SMOVC RDC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="imported.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">ACUEILL</a>
+    <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APROPOS</a>
+    <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="opport.html" class="w3-bar-item w3-button">Opportinutes</a>
+        <a href="galery.html" class="w3-bar-item w3-button">Galery</a>
+        <a href="actualites.html" class="w3-bar-item w3-button">Actualites</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="opport.html" class="w3-bar-item w3-button">Opportinutes</a>
+        <a href="galery.html" class="w3-bar-item w3-button">Galery</a>
+        <a href="actualites.html" class="w3-bar-item w3-button">Actualites</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROGRAMMES</a>
+  <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APROPOS</a>
+  <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
+  <a href="galery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GALERY</a>
+  <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+</div>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/14.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>GAHINGA</h3>
+      <p><b>Le meilleur pomme de terre du monde!</b></p>   
+    </div>
+  </div>
+   <div class="mySlides w3-display-container w3-center">
+    <img src="img/12.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>LIVRAISON</h3>
+      <p><b>Acheter et nous te livrerons a ta residence!</b></p>   
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/5.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>MATHER'O</h3>
+      <p><b>La boisson d'exellence .</b></p>    
+    </div>
+  </div>
+
+   <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">« Bienvenue sur le site officiel de l'etablissement ASMOVC RDC »</h2>
+    <p class="w3-opacity"><i>Nous restons à votre écoute</i></p>
+    <pclass="w3-justify">Pour toute question, suggestion ou partenariat, contactez-nous via le formulaire <br>ci-dessous ou par nos coordonnées directes.</p> 
+</pclass>
+</div>
+
+
+</div>
+  <form id="contact" action="conn.php" method="POST" novalidate>
+  <label for="name">Nom Complet</label>
+  <input id="name" name="name" type="text" required maxlength="100" />
+
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required />
+
+  <label for="subject">Sujet</label>
+  <input id="subject" name="subject" type="text" required maxlength="150" />
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required minlength="10" maxlength="5000"></textarea>
+
+  <!-- Honeypot (hidden from users but bots may fill) -->
+  <label class="visually-hidden" for="website">Website</label>
+  <input id="website" name="website" type="text" class="visually-hidden" aria-hidden="true" tabindex="-1" />
+
+  <button type="submit">Envoyer message</button>
+</form>
+
+
+
+<!-- google map start -->
+<div class="contact-block" >
+  <div class="contact-left">
+    <h2>Notre Addrsse</h2>
+    <p> <i> RD Congo, Nord-Kivu, Ville/Goma <br>Com.Karisimbi<br> Q.Ndosho Av. Muhabura<br></i><i style="color: red;">RCCM: CD/GOM/RCCM/21-A-00394</i> </p>
+
+    <ul class="contact-links">
+      <li><a href="tel:+15551234567" aria-label="Call us">📞 +243 97 74 22 116, +243808651580</a></li>
+      <li><a href="asmovc2014@gmail.com" aria-label="Email us">✉️  asmovc2014@gmail.com</a></li>
+      <li><a href="/contact" aria-label="Contact form">📝 Formulaire de contacts</a></li>
+    </ul>
+
+    <div class="social">
+      <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener" aria-label="Twitter">
+        <!-- simple accessible SVG icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.3-1 1.6-1.8-.7.4-1.5.7-2.3.9C18.6 4.9 17.5 4.4 16.3 4.4c-2 0-3.6 1.7-3.6 3.8 0 .3 0 .6.1.9C9.2 9 6.2 7.6 4.3 5.2c-.4.6-.6 1.4-.6 2.2 0 1.3.7 2.5 1.8 3.2-.6 0-1.1-.2-1.6-.5v.1c0 2.1 1.5 3.8 3.4 4.2-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.6 3.3-1.7 1.3-3.8 2-6 2-.4 0-.8 0-1.2-.1 2.1 1.3 4.5 2 7.1 2 8.5 0 13.2-7 13.2-13.1v-.6c.9-.7 1.6-1.5 2.1-2.4-.8.4-1.6.6-2.4.7z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6 1.11 6 0 4.88 0 3.5 0 2.12 1.11 1 2.49 1 3.86 1 4.98 2.12 4.98 3.5zM.5 8h3.99v13H.5zM8.5 8h3.83v1.8h.05c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.78 2.66 4.78 6.12V21H18.5v-6.2c0-1.48-.03-3.39-2.07-3.39-2.07 0-2.39 1.62-2.39 3.29V21H8.5z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <!-- Use the Google Maps "embed" iframe from Google Maps -> Share -> Embed map.
+         Replace src with your map's embed URL. Add loading="lazy" for performance. -->
+    <iframe
+      class="map-iframe"
+      src="https://www.google.com/maps/place/ASMOVC+RDC+COORDINATION/@-1.63894,29.1801962,17z/data=!3m1!4b1!4m6!3m5!1s0x19dd0952d0fb85e7:0xa36543f039180610!8m2!3d-1.63894!4d29.1801962!16s%2Fg%2F11r3f58bkk?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+      width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Office location on map" title="Office location on map"></iframe>
+  </div>
+</div>
+
+
+<!-- google map end -->
+
+
+<!-- footer start -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo.jpg" alt="Example Co. logo" width="120">
+      <div class="silv-details">
+      <details>
+        <summary><span>Amani patrick</span> build cap.</summary>
+        <div class="contributors">
+          <h3>Thanks to :</h3>
+          <ul><li>Silva-Charles <span>Dev.</span></li></ul>
+        </div>
+      </details>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+       <a href="index.html"><i>ACUEILL</i></a></li> 
+    <a href="apropos.html"><i>APROPOS</i></a></li> 
+    <a href="services.html"><i>SERVICES</i></a></li> 
+     <a href="actualites.html"><i>ACTUALITES</i></a></li> 
+    <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
+    <a href="galery.html"><I>GALERY</I></a></li> 
+    <a href="contacts.html"><i>CONTACTS</i></a></li> 
+    <a href="opport.html"><i>  & OPPORTINUTES</i></a>
+    <a href="politique.html"> <i>POLITIQUE</i></a></li>
+    </nav>
+
+    <div class="footer-contact">
+      <address>
+        <strong> Le Client est roi.</strong><br>
+        RDC, NORD KIVU Goma<br>
+        <a href="mailto:hello@example.com"> asmovc2014@gmail.com</a>
+      </address>
+      <div class="footer-social" aria-hidden="false">
+        <a href="https://twitter.com/example" class="icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub"> <i class="ri-facebook-box-line"></i></a>
+        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="tiktok"> <i class="ri-tiktok-line"></i></a>
+        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter"><i class="ri-youtube-line"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>&copy; <span id="year"></span> Asmovc RDC. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<!-- footer end -->
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
