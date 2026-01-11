@@ -1,0 +1,58 @@
+/* Base: mobile small & large (mobile-first) */
+.appui{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Generic card styles used by each child */
+.appui > div {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  color: #111;
+}
+
+/* Heading & underline style preserved from markup */
+.appui h1 { margin: 0 0 8px; font-size: 1.1rem; }
+.appui h1 u { text-decoration: underline; }
+
+/* Text color refinement */
+.appui p, .appui p1 { margin: 0; line-height: 1.4; }
+
+/* Mobile small: up to 359px -> tighter spacing */
+@media (max-width: 359px){
+  .appui { gap: 10px; padding: 10px; }
+  .appui h1 { font-size: 1rem; }
+  .appui p, .appui p1 { font-size: 0. nine rem; } /* fallback if needed */
+}
+
+/* Mobile large: 360px — 599px (phones) */
+@media (min-width: 360px) and (max-width: 599px){
+  .appui { grid-template-columns: repeat(1, 1fr); gap: 12px; padding: 12px; }
+  .appui h1 { font-size: 1.15rem; }
+}
+
+/* Tablet: 600px — 899px -> two columns */
+@media (min-width: 600px) and (max-width: 899px){
+  .appui { grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 18px; }
+  .appui h1 { font-size: 1.2rem; }
+}
+
+/* Laptop: 900px — 1199px -> three columns */
+@media (min-width: 900px) and (max-width: 1199px){
+  .appui { grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1100px; margin: 0 auto; }
+  .appui h1 { font-size: 1.15rem; }
+}
+
+/* Desktop: 1200px and up -> four columns (or more) */
+@media (min-width: 1200px){
+  .appui { grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1400px; margin: 0 auto; }
+  .appui h1 { font-size: 1.2rem; }
+}
+
+/* Accessibility: ensure focus and contrast */
+.appui > div:focus-within { outline: 2px solid rgba(21,101,192,.15); }
