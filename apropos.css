@@ -24,7 +24,7 @@ body{
   width: 100%;
   max-width: var(--max-width);
   display: grid;
-  gap: var(--gap);
+  gap: 1rem;
   grid-template-columns: 1fr; /* stacked by default (small phones) */
   align-items: start;
 }
@@ -35,10 +35,11 @@ figure{
   padding: var(--card-pad);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-  margin: 0;
-  display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
+  width: 250px;
+  height: 400px;
+  margin: 16px;
 }
 
 /* avatar */

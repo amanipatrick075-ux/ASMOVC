@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .maincontainer{
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    background-color: rgb(9, 86, 154);
+} */
+.maingrid{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    background-color: rgb(9, 86, 154);
+}
+.maingrid img {
+    width: 300px;
+    height: 270px;
+}
