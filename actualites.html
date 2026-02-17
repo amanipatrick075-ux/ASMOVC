@@ -1,124 +1,220 @@
-
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>ACTUALITES</title>
-  <link rel="stylesheet" href="style.css">
-  <title>ASMOVC DRC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="mainscript.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Submit News</title>
+<style>
+  :root{
+    --gap: 12px;
+    --max-width: 900px;
+  }
+
+  body{
+    font-family: system-ui, Arial, sans-serif;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container{
+    width: 100%;
+    max-width: var(--max-width);
+    background: #fff;
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  h1{ margin: 0 0 12px 0; font-size: 1.25rem; }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--gap);
+    align-items: start;
+  }
+
+  /* Left column (fields) stacks on small screens */
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  textarea { min-height: 140px; resize: vertical; }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  button.primary { background: #1f6feb; color: #fff; }
+  button.ghost { background: #f6f8fa; color: #111; }
+
+  /* Preview box on the right */
+  .preview {
+    border: 1px dashed #e3e8ee;
+    padding: 12px;
+    border-radius: 6px;
+    background: #fbfdff;
+    min-height: 120px;
+  }
+
+  .preview h3 { margin: 0 0 8px 0; font-size: 1rem; }
+  .preview p { margin: 0; color: #333; white-space: pre-wrap; }
+
+  /* Responsive: single column under 800px */
+  @media (max-width: 800px){
+    form { grid-template-columns: 1fr; }
+    .actions { justify-content: stretch; }
+  }
+</style>
 </head>
 <body>
-  <header>
-  <h1 class="main-header" id="
-  main-header">ASMOVC official</h1>
-  <i id="menu" class="ri-menu-fill"></i>
-  <nav id="nav">
-   <a href="index.html">ACUEILL</a></li> 
-    <a href="apropos.html">APROPOS</a></li> 
-    <a href="services.html">SERVICES</a></li> 
-     <a href="actualites.html">ACTUALITES</a></li> 
-    <a href="programmes.html">PROGRAMMES</a></li> 
-    <a href="galery.html">GALERY</a></li> 
-    <a href="contacts.html">CONTACTS</a></li> 
-  <a href="opport.html">   OPPORTINUTES</a>
-    <a href="politique.html"> POLITIQUE</a></li>
-    
-    <!-- Add links to all 10 pages -->
-  </nav>
-  </header>
-<div class="txt-intro">
-  <h1>Restez informés de nos dernières activités, programmes et événements.</h1>
-  <p>Dans cette rubrique, vous trouverez des articles, communiqués, témoignages et publications mettant en avant les actions concrètes de l’ASMOVC RDC sur le terrain.</p>
+  <div class="container">
+    <h1>Submit a News Item</h1>
 
-</div>
-
-  <section class="news-section">
-  <h2>Annonce officielle</h2>
-
-  <form id="newsForm" class="news-form">
-    <input type="text" id="newsTitle" placeholder="Titre" required />
-    <input ype="date" id="newsDate" />
-    <textarea id="newsSummary" placeholder="Synthese" required></textarea>
-    <button typte="submit" onclick="
-    alert('vous avez envoye avec succes')
-    ">Publier l'Annonce</button>
-  </form>
-
-  <div id="newsList" class="news-list">
-    <!-- Example static item -->
-    <article class="news-item">
-      <header>
-        <h3 class="news-title">Site Publie</h3>
-        <time class="news-date" datetime="2025-10-24">Oct 24, 2025</time>
-      </header>
-      <p class="news-summary">Nous avons publies l'annonce d'aujourdhui avec  X, Y and Z.</p>
-      <a class="news-readmore" href="/news/site-launched">ASMOVC Annonce</a>
-    </article>
-  </div>
-</section>
-<!-- CSS (NEWS START) -->
-
-<!-- CSS (NEWS END) -->
-
- <!-- footer start -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="img/logo.jpg" alt="Example Co. logo" width="120">
-      <div class="silv-details">
-      <details>
-        <summary><span>Amani patrick</span> build cap.</summary>
-        <div class="contributors">
-          <h3>Thanks to :</h3>
-          <ul><li>Silva-Charles <span>Dev.</span></li></ul>
+    <form id="newsForm" novalidate>
+      <div class="fields">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" placeholder="Short headline" required />
         </div>
-      </details>
+
+        <div>
+          <label for="summary">Summary</label>
+          <textarea id="summary" name="summary" placeholder="Short summary or lede" required></textarea>
+        </div>
+
+        <div>
+          <label for="content">Full Content</label>
+          <textarea id="content" name="content" placeholder="Full article or body"></textarea>
+        </div>
+
+        <div style="display:flex;gap:10px;">
+          <div style="flex:1;">
+            <label for="author">Author</label>
+            <input id="author" name="author" type="text" placeholder="Reporter name" />
+          </div>
+          <div style="width:160px;">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option>Local</option>
+              <option>World</option>
+              <option>Business</option>
+              <option>Tech</option>
+              <option>Sports</option>
+            </select>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <nav class="footer-nav" aria-label="Footer">
-       <a href="index.html"><i>ACUEILL</i></a></li> 
-    <a href="apropos.html"><i>APROPOS</i></a></li> 
-    <a href="services.html"><i>SERVICES</i></a></li> 
-     <a href="actualites.html"><i>ACTUALITES</i></a></li> 
-    <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
-    <a href="galery.html"><I>GALERY</I></a></li> 
-    <a href="contacts.html"><i>CONTACTS</i></a></li> 
-    <a href="opport.html"><i>  & OPPORTINUTES</i></a>
-    <a href="politique.html"> <i>POLITIQUE</i></a></li>
-    </nav>
+      <aside class="meta">
+        <div class="preview" id="preview">
+          <h3>Live preview</h3>
+          <p id="previewText">Fill in the form to see a preview.</p>
+        </div>
 
-    <div class="footer-contact">
-      <address>
-        <strong> Le Client est roi.</strong><br>
-        RDC, NORD KIVU Goma<br>
-        <a href="mailto:hello@example.com"> asmovc2014@gmail.com</a>
-      </address>
-      <div class="footer-social" aria-hidden="false">
-        <a href="https://twitter.com/example" class="icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub"> <i class="ri-facebook-box-line"></i></a>
-        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="tiktok"> <i class="ri-tiktok-line"></i></a>
-        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter"><i class="ri-youtube-line"></i></a>
-      </div>
-    </div>
+        <div class="actions" aria-hidden="false">
+          <button type="button" class="ghost" id="clearBtn">Clear</button>
+          <button type="submit" class="primary">Publish</button>
+        </div>
+      </aside>
+    </form>
   </div>
-
-  <div class="footer-bottom">
-    <small>&copy; <span id="year"></span> Asmovc RDC. All rights reserved.</small>
-  </div>
-</footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+  const form = document.getElementById('newsForm');
+  const fields = ['title','summary','content','author','category'];
+  const previewText = document.getElementById('previewText');
+  const clearBtn = document.getElementById('clearBtn');
+
+  function updatePreview(){
+    const t = document.getElementById('title').value.trim();
+    const s = document.getElementById('summary').value.trim();
+    const a = document.getElementById('author').value.trim();
+    const c = document.getElementById('category').value;
+    let out = t ? t + '\\n\\n' : '';
+    out += s ? s + '\\n\\n' : '';
+    out += a ? ('By ' + a + ' — ' + c) : ('Category: ' + c);
+    previewText.textContent = out || 'Fill in the form to see a preview.';
+  }
+
+  // live preview
+  fields.forEach(id => {
+    document.getElementById(id).addEventListener('input', updatePreview);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    form.reset();
+    updatePreview();
+  });
+
+  form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    // simple validation
+    const title = document.getElementById('title').value.trim();
+    const summary = document.getElementById('summary').value.trim();
+    if (!title || !summary) {
+      alert('Please provide a title and summary.');
+      return;
+    }
+
+    // simulate submit
+    const payload = {
+      title,
+      summary,
+      content: document.getElementById('content').value.trim(),
+      author: document.getElementById('author').value.trim(),
+      category: document.getElementById('category').value
+    };
+
+    // In production, POST to your API endpoint:
+    // fetch('/api/news', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+    console.log('submit payload', payload);
+    alert('News submitted (demo). Check console.');
+    form.reset();
+    updatePreview();
+  });
+
+  updatePreview();
+})();
 </script>
-<!-- footer end -->
-
-    
 </body>
-
-
-
 </html>
