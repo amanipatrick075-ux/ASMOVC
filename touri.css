@@ -1,0 +1,99 @@
+/* Reset minimal */
+/* Base: mobile-first (single column for all phones) */
+.tourismeDetails {
+  padding: 1rem;
+  background: #f7fafc;
+  color: #0b1220;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.5;
+}
+
+.tourismeDetails h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Grid wrapper: default 1 column */
+.tourisme-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  margin-top: 0.5rem;
+}
+
+/* Card style */
+.tourisme-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.9rem;
+  border: 1px solid rgba(11,18,32,0.06);
+  box-shadow: 0 1px 4px rgba(2,6,23,0.04);
+}
+
+/* Headings inside cards */
+.tourisme-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* List spacing */
+.tourisme-card ol {
+  padding-left: 1.1rem;
+  margin-top: 0.35rem;
+}
+
+/* ---------- Breakpoints ---------- */
+
+/* Large phones (approx >= 360px) — slightly larger text/spacing */
+@media (min-width: 360px) {
+  .tourismeDetails {
+    padding: 1rem;
+  }
+  .tourismeDetails h2 { font-size: 1.25rem; }
+  .tourisme-card { padding: 1rem; }
+}
+
+/* Small tablets / landscape phones (>= 480px) — keep single column but increase max-width */
+@media (min-width: 480px) {
+  .tourismeDetails { max-width: 680px; margin-left: auto; margin-right: auto; }
+}
+
+/* Tablets and small desktops: switch to two columns (>= 700px) */
+@media (min-width: 700px) {
+  .tourisme-grid {
+    grid-template-columns: 1fr 1fr; /* two balanced columns */
+    align-items: start;
+    gap: 1rem;
+  }
+}
+
+/* Medium laptops: increase spacing and card padding (>= 900px) */
+@media (min-width: 900px) {
+  .tourismeDetails { padding: 1.5rem; }
+  .tourisme-card { padding: 1.2rem; }
+  .tourismeDetails h2 { font-size: 1.5rem; }
+}
+
+/* Large laptops / Desktop: center content, wider max-width (>= 1200px) */
+@media (min-width: 1200px) {
+  .tourismeDetails {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+  }
+  .tourisme-grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr 1fr; /* keep two columns, can increase to 3 if needed */
+  }
+}
+
+/* Optional: Larger desktop — 3-column variant (uncomment if you add a third card) */
+/*
+@media (min-width: 1600px) {
+  .tourisme-grid { grid-template-columns: repeat(3, 1fr); }
+}
+*/
+
+/* Focus and accessibility */
+.tourisme-card:focus-within { outline: 3px solid rgba(2,6,23,0.06); outline-offset: 4px; }

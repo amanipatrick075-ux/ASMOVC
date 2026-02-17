@@ -1,73 +1,150 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JavaScript Demo</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"href='script.js'>
-  <title>Page Title</title>
+<title>SMOVC RDC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="imported.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="ai.css">
+<link rel="stylesheet" href="touri.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 </head>
 <body>
-  <div>
-  <nav>
-    <a href="index.html">ACUEILL</a> |
-    <a href="apropos.html">APROPOS</a> |
-    <a href="services.html"loo[]"></label>SERVICES</a> |
-    <a href="actualites.html">ACTUALITES</a>
-    <a href="programmes.html">PROGRAMMES</a>
-    <a href="galery.html">GALERY</a>
-    <a href="contacts.html">CONTACTS</a>
 
-    <a href="opport.html"> OPPORTINUTES</a>
-    <a href="politique.html"> POLITIQUE</a>
-    </nav>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">ASMOVC</a>
+    <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APROPOS</a>
+    <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAMMES</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PLUS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="opport.html" class="w3-bar-item w3-button">Opportinutes</a>
+        <a href="galery.html" class="w3-bar-item w3-button">Galery</a>
+        <a href="3actualites.html" class="w3-bar-item w3-button">Actualites</a>
+      </div>
     </div>
-    <style>
-        .txt-ac{
-            display: flex;
-            justify-content: space-between;
-            padding: auto;
-            background-color: lightskyblue;
-            color: black;
-        }
-    </style>
-
-<h1 style="color: blue;">ASMOVC RDC, à travers ce service, souhaite promouvoir le tourisme interne et faire découvrir la beauté du Nord-Kivu et ailleurs.</h1>
-    <p></p>
-<div class="txt-ac">
-    
-    <div class="txt-ac-1">
-        <h1>Activités touristiques proposées :</h1>
-        <ol>
-            <li>Excursions à Virunga (Goma et environs)</li>
-            <li>Visites guidées à Masisi, Walikale, Rutshuru (sites naturels et agricoles)</li>
-            <li>Circuits communautaires : immersion dans les villages, coopératives et champs</li>
-            <li>Accompagnement des visiteurs (guides touristiques locaux)</li>
-            <li>Réservation d’hébergement (partenariat avec hôtels et maisons d’accueil locales)</li>
-
-        </ol>
-
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="transport.html" class="w3-bar-item w3-button">TRANSPORT</a>
+        <a href="3galery.html" class="w3-bar-item w3-button">TOURISME</a>
+        <a href="3actualites.html" class="w3-bar-item w3-button">AGRICULTURE</a>
+        <a href="3opport.html" class="w3-bar-item w3-button">ACHAT ET VENTE PARCELLES</a>
+        <a href="3galery.html" class="w3-bar-item w3-button">ACCOMPAGNEMENT</a>
+        <a href="3actualites.html" class="w3-bar-item w3-button">LOGISTIQUE</a>
+        <a href="3opport.html" class="w3-bar-item w3-button">ARTISANAL</a>
+        <a href="3galery.html" class="w3-bar-item w3-button">EPARGNE ET CREDIT</a>
+        <a href="3actualites.html" class="w3-bar-item w3-button">CATEGORIE</a>
+      </div>
     </div>
-    <div class="txt-ac-2">
-        <p>ASMOVC RDC, c’est aussi un pont entre le développement communautaire et la découverte du patrimoine local.</p>
-        <h1>Objectifs du service</h1>
-        <ol>
-            <li>Faciliter la mobilité des populations rurales et urbaines</li>
-            <li>Promouvoir le tourisme interne et communautaire</li>
-            <li>Créer des opportunités économiques autour du transport</li>
-            <li>Soutenir les initiatives de commerce inter-territorial</li>
-        </ol>
-
-    </div>
-
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
 </div>
 
- <!-- footer start -->
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="programmes.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROGRAMMES</a>
+  <a href="apropos.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APROPOS</a>
+  <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
+  <a href="galery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GALERY</a>
+  <a href="3services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="opport.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OPPORTINUTES</a>
+  <a href="3actualites.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ACTUALITES</a>
+  <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
+</div>
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/14.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>GAHINGA</h3>
+      <p><b>Le meilleur pomme de terre du monde!</b></p>   
+    </div>
+  </div>
+   <div class="mySlides w3-display-container w3-center">
+    <img src="img/12.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>LIVRAISON</h3>
+      <p><b>Acheter et nous te livrerons a ta residence!</b></p>   
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/5.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>MATHER'O</h3>
+      <p><b>La boisson d'exellence .</b></p>    
+    </div>
+  </div>
+
+   <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">« Visiter la RDC avec l'entreprise ASMOVC DRC et rejuissez vous du tours »</h2>
+    <p class="w3-opacity"><i>ASMOVC RDC, c’est aussi un pont entre le développement communautaire et la découverte du patrimoine local.</i></p>
+    <pclass="w3-justify">ASMOVC RDC, à travers ce service, souhaite promouvoir le tourisme interne et faire découvrir la beauté du Nord-Kivu et ailleurs.</p> 
+</p>
+</div><section class="tourismeDetails" aria-labelledby="tourisme-title">
+  <h2 id="tourisme-title">Activités et objectifs</h2>
+
+  <div class="tourisme-grid">
+    <article class="tourisme-card" aria-labelledby="activites-title">
+      <h3 id="activites-title">Activités touristiques proposées</h3>
+      <ol>
+        <li>Excursions à Virunga (Goma et environs)</li>
+        <li>Visites guidées à Masisi, Walikale, Rutshuru (sites naturels et agricoles)</li>
+        <li>Circuits communautaires : immersion dans les villages, coopératives et champs</li>
+        <li>Accompagnement des visiteurs (guides touristiques locaux)</li>
+        <li>Réservation d’hébergement (partenariat avec hôtels et maisons d’accueil locales)</li>
+      </ol>
+    </article>
+
+    <article class="tourisme-card" aria-labelledby="objectifs-title">
+      <h3 id="objectifs-title">Objectifs du service</h3>
+      <ol>
+        <li>Faciliter la mobilité des populations rurales et urbaines</li>
+        <li>Promouvoir le tourisme interne et communautaire</li>
+        <li>Créer des opportunités économiques autour du transport</li>
+        <li>Soutenir les initiatives de commerce inter-territorial</li>
+      </ol>
+    </article>
+  </div>
+</section>
+
+ 
+
+
+
+
+
+<!-- footer start -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="img/logo.jpg" alt="Example Co. logo" width="120">
-      <p>Amani patrick build cap</p>
+      <div class="silv-details">
+      <details>
+        <summary><span>Amani patrick</span> build cap.</summary>
+        <div class="contributors">
+          <h3>Thanks to :</h3>
+          <ul><li>Silva-Charles <span>Dev.</span></li></ul>
+        </div>
+      </details>
+      </div>
     </div>
 
     <nav class="footer-nav" aria-label="Footer">
@@ -78,7 +155,7 @@
     <a href="programmes.html"><i>PROGRAMMES</i></a></li> 
     <a href="galery.html"><I>GALERY</I></a></li> 
     <a href="contacts.html"><i>CONTACTS</i></a></li> 
-  <a href="opport.html"><i>OPPORTINUTES</i></a>
+    <a href="opport.html"><i>  & OPPORTINUTES</i></a>
     <a href="politique.html"> <i>POLITIQUE</i></a></li>
     </nav>
 
@@ -86,13 +163,13 @@
       <address>
         <strong> Le Client est roi.</strong><br>
         RDC, NORD KIVU Goma<br>
-        <a href="mailto:hello@example.com">asmovcdrc@gmail.com</a>
+        <a href="mailto:hello@example.com"> asmovc2014@gmail.com</a>
       </address>
       <div class="footer-social" aria-hidden="false">
-        <a href="https://twitter.com/example" class="icon" aria-label="Twitter">🌐</a>
-        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub">📝</a>
-        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="Twitter">🌐</a>
-        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter">🌐</a>
+        <a href="https://twitter.com/example" class="icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063618981996" class="icon" aria-label="GitHub"> <i class="ri-facebook-box-line"></i></a>
+        <a href="https://www.tiktok.com/@asmovcrdc?_r=1&_t=ZM-910rZ6paxqa" class="icon" aria-label="tiktok"> <i class="ri-tiktok-line"></i></a>
+        <a href="https://youtube.com/@asmovctv8657?si=DMXPn4LkV1CT4eTG" class="icon" aria-label="Twitter"><i class="ri-youtube-line"></i></a>
       </div>
     </div>
   </div>
@@ -106,7 +183,41 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <!-- footer end -->
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
